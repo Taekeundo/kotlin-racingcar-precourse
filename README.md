@@ -155,25 +155,26 @@
 ## (6) Refactoring Plan
 
 ### [ Guidelines ]
-- [ ] : Apply SRP
-- [ ] : Improve readability
-- [ ] : Remove duplicated logic
-- [ ] : Clean code (limit depth)
-- [ ] : Apply naming conventions (formatting)
+- [✅] : Apply SRP
+- [✅] : Improve readability
+- [✅] : Remove duplicated logic
+- [] : Clean code (limit depth)
+- [✅] : Apply naming conventions (formatting)
+- [✅] : Apply MVC or DDD
 
 ### [ Domain ]
-- [ ] : Make sure each entity has a clear and simple purpose.
+- [✅] : Make sure each entity has a clear and simple purpose.
 
 ### [ Service ]
-- [ ] : Implement business logic (calc, search, etc.).
+- [✅] : Implement business logic (calc, search, etc.).
 
 ### [ Controller ]
-- [ ] : Handle user input and request flow
-- [ ] : Delegate logic to services
+- [✅] : Handle user input and request flow
+- [✅] : Delegate logic to services
 
 ### [ View ]
-- [ ] : InputView  - Handle user input
-- [ ] : OutputView - Display results and errors
+- [✅] : InputView  - Handle user input
+- [✅] : OutputView - Display results and errors
 
 
 
@@ -182,8 +183,8 @@
 ## (7) Finalization & Submission
 
 ### [ Review ]
-- [ ] : Run `./gradlew clean test` <All tests pass>
-- [ ] : Verify edge case handling and exceptional cases
-- [ ] : Perform final test on the website submission page.
-- [ ] : Update README
-- [ ] : Create PR for submission
+- [✅] : Run `./gradlew clean test` <All tests pass>
+- [✅] : Verify edge case handling and exceptional cases
+- [✅] : Perform final test on the website submission page.
+- [✅] : Update README
+- [✅] : Create PR for submission
