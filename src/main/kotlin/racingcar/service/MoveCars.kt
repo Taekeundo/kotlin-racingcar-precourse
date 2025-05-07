@@ -15,7 +15,7 @@ object MoveCars {
         }
     }
 
-    fun tryMove(car: Car) {
+    private fun tryMove(car: Car) {
         val randomNumber = Randoms.pickNumberInRange(0, 9)
         if (randomNumber >= 4)
             car.move()
