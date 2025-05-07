@@ -1,9 +1,9 @@
 package racingcar.controller
 
 import racingcar.domain.Car
-import racingcar.service.MoveCars
 import racingcar.view.InputView
 import racingcar.view.OutputView
+import racingcar.service.MoveCars
 import racingcar.service.Validator
 import racingcar.service.WinnerCalculator
 

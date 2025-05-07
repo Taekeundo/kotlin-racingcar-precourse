@@ -9,11 +9,15 @@ object MoveCars {
     fun moveEachCar(carList: List<Car>, nMoves: Int) {
         repeat(nMoves) {
             carList.forEach { car ->
-                val randomNumber = Randoms.pickNumberInRange(0, 9)
-                if (randomNumber >= 4)
-                    car.move()
+                tryMove(car)
             }
             OutputView.printCarPositions(carList.map { it.name to it.position })
         }
+    }
+
+    fun tryMove(car: Car) {
+        val randomNumber = Randoms.pickNumberInRange(0, 9)
+        if (randomNumber >= 4)
+            car.move()
     }
 }
