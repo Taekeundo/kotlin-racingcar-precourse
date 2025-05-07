@@ -138,15 +138,15 @@
 - Confirm stability and safety before starting refactoring
 
 ### [ Basic Testing ]
-- [ ] : Test basic cases. (normal scenarios)
-- [ ] : Test edge cases. (e.g., empty, invalid, special conditions)
-- [ ] : Test invalid inputs -> ensure proper error handling.
-- [ ] : Confirm that no critical errors occur during feature usage.
-- [ ] : Create TDD file for core features.
+- [✅] : Test basic cases. (normal scenarios)
+- [✅] : Test edge cases. (e.g., empty, invalid, special conditions)
+- [✅] : Test invalid inputs -> ensure proper error handling.
+- [✅] : Confirm that no critical errors occur during feature usage.
+- [✅] : Create TDD file for core features.
 
 ### [ Automated Testing ]
-- [ ] : Run `./gradlew clean test`
-- [ ] : Perform final test on the website submission page.
+- [✅] : Run `./gradlew clean test`
+- [✅] : Perform final test on the website submission page.
 
 
 
