@@ -29,6 +29,7 @@ fun main() {
     val carList = carNames.map { Car(it) }
 
     /* (4) Start Racing */
+    println("Race Results")
     repeat(nMoves) {
         carList.forEach { car ->
             val randomNumber = Randoms.pickNumberInRange(0, 9)
@@ -48,7 +49,7 @@ fun main() {
         .filter { it.position == maxPosition }
         .map { it.name }
 
-    println("Winners: ${winners.joinToString(", ")}")
+    println("Winners : ${winners.joinToString(", ")}")
 }
 
 fun validateCarNames(carNames: List<String>) {
