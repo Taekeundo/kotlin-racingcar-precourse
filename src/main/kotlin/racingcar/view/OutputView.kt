@@ -14,12 +14,16 @@ object OutputView {
     }
 
     fun printCarPositions(carStatus: List<Pair<String, Int>>) {
-        val result = carStatus.map { (name, position) -> "$name: ${"-".repeat(position)}" }
+        val result = carStatus.map { (name, position) -> "$name : ${"-".repeat(position)}" }
         result.forEach { println(it) }
         println()
     }
 
     fun printWinners(winners: List<String>) {
         println("Winners : ${winners.joinToString(", ")}")
+    }
+
+    fun printNewLine() {
+        println()
     }
 }
