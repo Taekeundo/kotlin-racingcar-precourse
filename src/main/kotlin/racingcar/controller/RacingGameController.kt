@@ -19,14 +19,14 @@ class RacingGameController {
         OutputView.printWinners(winners)
     }
 
-    fun getCarNames() : List<String> {
+    private fun getCarNames() : List<String> {
         OutputView.askCarNames()
         val carNames = InputView.readCarNames()
         Validator.validateCarNames(carNames)
         return carNames
     }
 
-    fun getNumberOfMoves() : Int {
+    private fun getNumberOfMoves() : Int {
         OutputView.askNumberOfMoves()
         val nMovesInput = InputView.readNumberOfMoves()
         Validator.validateNumberOfMoves(nMovesInput)
