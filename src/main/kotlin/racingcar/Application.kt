@@ -40,6 +40,15 @@ fun main() {
         }
         println()
     }
+
+    /* (5) Find winner */
+    val maxPosition: Int = carList.maxOf { it.position }
+
+    val winners: List<String> = carList
+        .filter { it.position == maxPosition }
+        .map { it.name }
+
+    println("Winners: ${winners.joinToString(", ")}")
 }
 
 fun validateCarNames(carNames: List<String>) {
