@@ -1,26 +1,45 @@
 package racingcar
 
 import camp.nextstep.edu.missionutils.Console
+import camp.nextstep.edu.missionutils.Randoms
 
 fun main() {
-    // Input(1) carNames
+
+    /* (1) Input(1) carNames */
     println("Enter the names of the cars (comma-separated):")
-    val carLists = Console.readLine()
+    val carNames = Console.readLine()
         .split(",")
         .map { it.trim() }
 
-    validateCarNames(carLists)
-    println("Valid car names: $carLists")
+    validateCarNames(carNames)
+    // println("Valid car names: $carNames")
 
-    // Input(2) nMoves
+    /* (2) Input(2) nMoves */
     println("How many rounds will be played?")
     val nMovesInput = Console.readLine()
 
     validateNumberOfMoves(nMovesInput)
 
     val nMoves = nMovesInput.toInt()
+    println()
 
-    println("Valid number of moves: $nMoves")
+    // println("Valid number of moves: $nMoves")
+
+    /* (3) Service: generate & save */
+    val carList = carNames.map { Car(it) }
+
+    /* (4) Start Racing */
+    repeat(nMoves) {
+        carList.forEach { car ->
+            val randomNumber = Randoms.pickNumberInRange(0, 9)
+            if (randomNumber >= 4)
+                car.move()
+        }
+        carList.forEach { car ->
+            println("${car.name} : ${"-".repeat(car.position)}")
+        }
+        println()
+    }
 }
 
 fun validateCarNames(carNames: List<String>) {
@@ -40,5 +59,13 @@ fun validateNumberOfMoves(input: String) {
 
     if (number <= 0) {
         throw IllegalArgumentException("Number of moves must be greater than 0.")
+    }
+}
+
+class Car(val name: String) {
+    var position: Int = 0
+
+    fun move() {
+        position++
     }
 }
