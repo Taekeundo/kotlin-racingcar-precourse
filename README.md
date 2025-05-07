@@ -91,30 +91,30 @@
 ## (3) Feature List based on the Execution Flow
 
 ### 1. Input & Output
-- [ ] Show message: "Enter the names of the cars (comma-separated):"
-- [ ] Receive car names and parse them
-- [ ] Validate car names (length, duplicate, empty)
+- [✅] Show message: "Enter the names of the cars (comma-separated):"
+- [✅] Receive car names and parse them
+- [✅] Validate car names (length, duplicate, empty)
 
-- [ ] Show message: "How many rounds will be played?"
-- [ ] Receive number of rounds
-- [ ] Validate number of rounds (integer, > 0)
+- [✅] Show message: "How many rounds will be played?"
+- [✅] Receive number of rounds
+- [✅] Validate number of rounds (integer, > 0)
 
 ### 2. Race Execution
-- [ ] Run race for N rounds
-- [ ] For each car, generate random number and decide move
-- [ ] Save race result per round
-- [ ] Print race result after each round
+- [✅] Run race for N rounds
+- [✅] For each car, generate random number and decide move
+- [✅] Save race result per round
+- [✅] Print race result after each round
 
 ### 3. Result Calculation
-- [ ] Calculate winners based on maximum moves
-- [ ] Handle co-winners
+- [✅] Calculate winners based on maximum moves
+- [✅] Handle co-winners
 
 ### 4. Final Output
-- [ ] Show winner(s)
+- [✅] Show winner(s)
 
 ### 5. Exception Handling
-- [ ] Show error messages for invalid car names
-- [ ] Show error messages for invalid number of rounds
+- [✅] Show error messages for invalid car names
+- [✅] Show error messages for invalid number of rounds
 
 
 
@@ -122,13 +122,12 @@
 
 ## (4) Implement Features (Build the Prototype)
 
-- [ ] : Implement ???
-- [ ] : Implement ???
-- [ ] : Implement ???
-- [ ] : Implement ???
-- [ ] : Implement ???
-- [ ] : Implement ???
-- [ ] : Ensure all flows are working.
+- [✅] : Implement (1) Input & Output
+- [✅] : Implement (2) Race Execution
+- [✅] : Implement (3) Result Calculation 
+- [✅] : Implement (4) Final Output
+- [✅] : Implement (5) Exception Handling
+- [✅] : Ensure all flows are working.
 
 
 
