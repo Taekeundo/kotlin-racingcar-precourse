@@ -1,25 +1,20 @@
 package racingcar
 
-import camp.nextstep.edu.missionutils.Console
+import racingcar.view.InputView
+import racingcar.view.OutputView
 import camp.nextstep.edu.missionutils.Randoms
 
 fun main() {
 
     /* (1) Input(1) carNames */
     println("Enter the names of the cars (comma-separated):")
-    val carNames = Console.readLine()
-        .split(",")
-        .map { it.trim() }
-
+    val carNames = InputView.readCarNames()
     validateCarNames(carNames)
-    // println("Valid car names: $carNames")
 
     /* (2) Input(2) nMoves */
     println("How many rounds will be played?")
-    val nMovesInput = Console.readLine()
-
+    val nMovesInput = InputView.readNumberOfMoves()
     validateNumberOfMoves(nMovesInput)
-
     val nMoves = nMovesInput.toInt()
     println()
 
