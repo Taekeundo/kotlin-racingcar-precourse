@@ -25,12 +25,64 @@
 
 
 ## (2) Execution Flow
-1. Show main menu
-2. Select an action
-3. Input necessary data
-4. Validate and process the data
-5. Display results or error messages
-6. Repeat or exit
+1. OutputView
+   "Enter the names of the cars (comma-separated):"
+
+2. InputView (CarNames <List>)
+   e.g.) "jason, ja, j"
+
+   -> Validate Input(1)
+        Max length: 5 letters
+        Duplication X
+        Empty X
+
+3. OutputView
+   "How many rounds will be played?"
+
+4. InputView (nMove <Int>)
+   e.g.) 5
+
+  -> Validate Input(2)
+        Only Integer
+        Must be over 0
+
+5. OutputView
+   "\n"
+
+6. Service: generate & save
+   1. Loop (Each round)
+   2. generate Random number 
+      If) Over 4 -> go
+      Else) -> Not go
+   3. Save each round result
+      RoundResult <List>
+
+   { carName: jason, position: 2 }
+   { carName: ja, position: 1 }
+   { carName: j, position: 3 }
+
+7. Service: Calc
+   Calculate winner -> Comparing final result.
+
+   !! Handling Co-winner !!
+
+8. OutputView
+   Print loop for each round result as many as "nMove" times.
+
+        Race Results
+        jason : -
+        ja : -
+        j : -
+
+9. OutputView
+   "\n"
+
+10. OutputView
+   "Winners : jason"
+
+11. Error handling
+    - Invalid "carName"
+    - Invalid "nMove"
 
 
 
@@ -38,29 +90,31 @@
 
 ## (3) Feature List based on the Execution Flow
 
-### 1. Program Start & Main Menu
-- [ ] : Display the main menu when the program starts.
-- [ ] : Allow users to select core actions or exit the program.
-        e.g., Search, Register, Exit
+### 1. Input & Output
+- [ ] Show message: "Enter the names of the cars (comma-separated):"
+- [ ] Receive car names and parse them
+- [ ] Validate car names (length, duplicate, empty)
 
-### 2. User Input
-- [ ] : Accept user input for required actions.
-- [ ] : Validate user input and handle invalid cases.
-- [ ] : Transform user input into usable format if necessary.
+- [ ] Show message: "How many rounds will be played?"
+- [ ] Receive number of rounds
+- [ ] Validate number of rounds (integer, > 0)
 
-### 3. Processing (Logic execution)
-- [ ] : Save the validated and transformed data into storage.
-- [ ] : Execture business logic as necessary.<br>
-        `Calculation or Search`
+### 2. Race Execution
+- [ ] Run race for N rounds
+- [ ] For each car, generate random number and decide move
+- [ ] Save race result per round
+- [ ] Print race result after each round
 
-### 4. Exception Handling
-- [ ] : Handle invalid inputs and edge cases during processing.
-- [ ] : Catch unexpected errors to prevent program crashes.
-- [ ] : Prepare error messages when necessary.
+### 3. Result Calculation
+- [ ] Calculate winners based on maximum moves
+- [ ] Handle co-winners
 
-### 5. Output
-- [ ] : Display processed results to the user.
-- [ ] : Display prepared error messages in case of fail or invalid actions.
+### 4. Final Output
+- [ ] Show winner(s)
+
+### 5. Exception Handling
+- [ ] Show error messages for invalid car names
+- [ ] Show error messages for invalid number of rounds
 
 
 
