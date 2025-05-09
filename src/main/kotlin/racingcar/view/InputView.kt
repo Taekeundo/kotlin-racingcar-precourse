@@ -4,14 +4,11 @@ import camp.nextstep.edu.missionutils.Console
 
 object InputView {
 
-    fun readCarNames(): List<String> {
+    fun readCarNames(): String {
         return Console.readLine()
-            .split(",")
-            .map { it.trim() }
     }
 
     fun readNumberOfMoves(): String {
-        val input = Console.readLine()
-        return input
+        return Console.readLine()
     }
 }

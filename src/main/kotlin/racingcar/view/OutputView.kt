@@ -1,5 +1,7 @@
 package racingcar.view
 
+import racingcar.domain.RaceResult
+
 object OutputView {
     fun askCarNames() {
         println("Enter the names of the cars (comma-separated):")
@@ -25,5 +27,13 @@ object OutputView {
 
     fun printNewLine() {
         println()
+    }
+
+    fun printRaceResult(result: RaceResult) {
+        printRaceResultsHeader()
+        result.roundResult.forEach { round ->
+            printCarPositions(round.positions.map { it.name to it.position })
+        }
+        printWinners(result.winners)
     }
 }
