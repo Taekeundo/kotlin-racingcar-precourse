@@ -25,6 +25,50 @@
 
 
 ## (2) Execution Flow
+```
+main()
+├── Ask input(1) (e.g., names)
+├── Get input
+├── Validate input
+│
+├── Ask input(2) (e.g., number of rounds)
+├── Get input
+├── Validate input
+│
+├── Generate initial game state
+├── Loop for N rounds
+│     ├── Move logic (e.g., random check, calc)
+│     └── Store round result snapshot
+│
+├── Determine winner(s)
+│
+├── Process final result
+└── Print output
+```
+
+### STEP 1. INPUT
+- read raw input(s) from user
+- parse if needed (e.g., split, trim, convert)
+- validate each input (type, range, format, rule)
+
+### STEP 2. INIT
+- create initial state/data structure based on input
+- initialize domain objects or configuration if needed
+
+### STEP 3. PROCESS / LOOP
+- repeat or iterate as required by the problem
+    - apply logic per iteration (e.g., rule check, update state)
+    - track intermediate result if necessary
+
+### STEP 4. FINALIZE
+- process final result (e.g., filter, calculate, find max/min)
+- resolve edge cases (e.g., tie, multiple result candidates)
+
+### STEP 5. OUTPUT
+- format and display result
+- show error messages if applicable
+
+### Flow
 1. OutputView<br>
    "Enter the names of the cars (comma-separated):"
 
