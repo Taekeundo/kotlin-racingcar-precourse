@@ -3,16 +3,21 @@ package racingcar.service
 import camp.nextstep.edu.missionutils.Randoms
 
 import racingcar.domain.Car
-import racingcar.view.OutputView
+import racingcar.domain.CarPosition
+import racingcar.domain.RoundResult
 
 object MoveCars {
-    fun moveEachCar(carList: List<Car>, nMoves: Int) {
+    fun moveEachCar(carList: List<Car>, nMoves: Int): List<RoundResult> {
+        val roundResults = mutableListOf<RoundResult>()
+
         repeat(nMoves) {
             carList.forEach { car ->
                 tryMove(car)
             }
-            OutputView.printCarPositions(carList.map { it.name to it.position })
+            val positions = carList.map { CarPosition(it.name, it.position) }
+            roundResults.add(RoundResult(positions))
         }
+        return roundResults
     }
 
     private fun tryMove(car: Car) {
