@@ -25,28 +25,32 @@
 
 
 ## (2) Execution Flow
-1. OutputView
+1. OutputView<br>
    "Enter the names of the cars (comma-separated):"
 
-2. InputView (CarNames <List>)
+2. InputView (CarNames <List>)<br>
    e.g.) "jason, ja, j"
 
    -> Validate Input(1)
-        Max length: 5 letters
-        Duplication X
-        Empty X
+   ```
+    Max length: 5 letters
+    Duplication X
+    Empty X
+   ```
 
-3. OutputView
+3. OutputView<br>
    "How many rounds will be played?"
 
-4. InputView (nMove <Int>)
+4. InputView (nMove <Int>) <br>
    e.g.) 5
 
   -> Validate Input(2)
-        Only Integer
-        Must be over 0
+    ```
+    Only Integer
+    Must be over 0
+    ```
 
-5. OutputView
+5. OutputView<br>
    "\n"
 
 6. Service: generate & save
@@ -56,17 +60,19 @@
       Else) -> Not go
    3. Save each round result
       RoundResult <List>
+   
+    ```
+    { carName: jason, position: 2 }
+    { carName: ja, position: 1 }
+    { carName: j, position: 3 }
+   ```
 
-   { carName: jason, position: 2 }
-   { carName: ja, position: 1 }
-   { carName: j, position: 3 }
-
-7. Service: Calc
+7. Service: Calc <br>
    Calculate winner -> Comparing final result.
 
    !! Handling Co-winner !!
 
-8. OutputView
+8. OutputView <br>
    Print loop for each round result as many as "nMove" times.
 
         Race Results
@@ -74,10 +80,10 @@
         ja : -
         j : -
 
-9. OutputView
+9. OutputView <br>
    "\n"
 
-10. OutputView
+10. OutputView <br>
    "Winners : jason"
 
 11. Error handling
@@ -164,22 +170,35 @@
 
 ### [ Domain ]
 - [✅] : Make sure each entity has a clear and simple purpose.
+- [✅] : Represent core domain concepts (Car, Race, etc.).
 
 ### [ Service ]
 - [✅] : Implement business logic (calc, search, etc.).
+- [✅] : Use domain models to process and return meaningful results.
 
 ### [ Controller ]
-- [✅] : Handle user input and request flow
-- [✅] : Delegate logic to services
+- [✅] : Handle user input and request flow only.
+- [✅] : Delegate logic to services. (Should)
+- [✅] : Connect view and service layers.
 
 ### [ View ]
 - [✅] : InputView  - Handle user input
+  - 입력'만' 담당 -> 가공, 검증 X
 - [✅] : OutputView - Display results and errors
+  - 출력'만' 담당 ->  가공, 검증 X
+
+### [ Support ]
+- [✅] : Provide utility(= helper) functions that assist processing but not part of core domain or business logic 
+- [✅] : Parser - Convert raw input to structured data (e.g., split, trim)
+- [✅] : Validator
+  - Ensure input validation (e.g., Check empty name, max length, Type)
+  - The role of a validator is to !! "only check" !!
+  - 오직 검사만! 값을 변형하거나 가공하거나 리턴하지 않아야 SRP가 지켜진다.
+  
 
 
 
-
-
+   
 ## (7) Finalization & Submission
 
 ### [ Review ]
