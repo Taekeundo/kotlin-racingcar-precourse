@@ -1,6 +1,6 @@
 package racingcar
 
-import racingcar.service.Validator
+import racingcar.support.Validator
 import org.junit.jupiter.api.Test
 import org.assertj.core.api.Assertions.assertThatThrownBy
 
